@@ -1,0 +1,128 @@
+.contactUs{
+    margin: 53px 0;
+    color:#444444;
+}
+.contactUs__container{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.contactUs__title{
+   font-size: 28px;
+   text-align: center;
+   margin-bottom: 20px;
+}
+.contactUs__text{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contactUs__body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contactUs__form{
+    max-width: 100%;
+    max-height: 100%;
+    margin-right: 24px;
+}
+ @media (max-width: 1216px){
+    .contactUs__form{
+        margin: 0 auto;
+    }
+} 
+.name_email_message{
+    display: flex;
+    flex-wrap: wrap;
+}
+.name_email_message input::placeholder{
+    font-style: italic;
+}
+.input__name{
+    flex: 1 1 50%;
+    padding-left: 15px;
+    max-width: 270px;
+    border: 2px solid #bec3c7;
+    height: 47px;
+    margin-bottom: 22px;
+    margin-right: 20px;
+}
+.input__email{
+    flex: 1 1 50%;
+    padding-left: 15px;
+    max-width: 270px;
+    border: 2px solid #bec3c7;
+    height: 47px;
+    margin-bottom: 22px;
+}
+@media (max-width: 590px){
+    .input__name{
+        flex: 1 1 100%;
+        margin-right: 0px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .input__email{
+        flex: 1 1 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.input__message{
+    max-width: 560px;
+    padding-left: 15px;
+    border: 2px solid #bec3c7;
+    height: 153px;
+    flex: 1 1 100%;
+    margin-bottom: 23px;
+}
+.input__message::placeholder{
+    transform: translateY(-50px);
+}   
+@media (max-width: 595px){
+    .contactUs__submit{
+        margin-right: 0;
+    }
+}
+.input__submit{
+    padding: 14px 28px;
+    background-color: #1bbc9b;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    max-width: 100%;
+    max-height: 100%;
+    float: right;
+}
+.input__submit:active{
+    background-color: #16a086;
+}
+.contactUs__map{
+    flex: 1 1 50%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+}
+@media (max-width: 1216px){
+    .contactUs__map{
+        padding: 20px;
+    }
+}
+.address{
+    margin-left: 15px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+.ymap{
+    max-height: 350px;
+    max-width: 600px;
+}
+@media (max-width: 1216px){
+    .ymap{
+        max-width: 100%;
+        max-height: 100%;
+        margin: 10px;
+    }
+}
