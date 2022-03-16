@@ -8,7 +8,7 @@
 ##  Функционал
 
 Адаптивная верстка c использованием иконочного шрифта Font Awesome.
-![Скриншот](https://github.com/chOlya/website-ts/blob/master/screenshots/screen1.jpg)
+![screen1](https://user-images.githubusercontent.com/79988835/158674886-3c311251-179a-41ea-9fa4-2566b71dc214.jpg)
 
 В блоке Portfolio реализована фильтрация при нажатии на кнопки категори.
 ![Скриншот](https://github.com/chOlya/website-ts/blob/master/screenshots/screen2.jpg)
