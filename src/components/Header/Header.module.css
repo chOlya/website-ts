@@ -1,0 +1,82 @@
+.header{
+    margin-bottom: 5px;
+}
+.header__container{
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    display: flex;
+    min-height: 94px;
+    align-items: center;
+}
+.header__logo{
+    width: 49px;
+    height: 40px;
+    margin-left: 40px;
+}
+.header__img{
+    min-width: 100%;
+    min-height: 100%;
+}
+.header__title{
+    font-weight: bold;
+}
+.header__text{
+    margin-left: 14px;
+}
+.header__menu{
+    margin-left: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+@media (max-width: 1330px){
+    .header__menu{
+        margin-left: 600px;
+    }
+}
+@media (max-width: 1200px){
+    .header__menu{
+        margin-left: 420px;
+    }
+}
+@media (max-width: 1005px){
+    .header__menu{
+        margin-left: 300px;
+    }
+}
+@media (max-width: 900px){
+    .header__menu{
+        margin-left: 190px;
+    }
+}
+@media (max-width: 760px){
+    .header__menu{
+        margin-left: 80px;
+    }
+}
+@media (max-width: 479px){
+    .header__menu{
+        margin-left: 40px;
+    }
+}
+.menu__item{
+    padding: 5px 0;
+}
+@media (max-width: 650px){
+    .menu__item{
+        font-size: 16px;
+    }
+}
+.menu__item:not(:last-child){
+    margin-right: 29px;
+}
+.menu__item a{
+    color: black;
+}
+.menu__item a:active{
+    background-color: #1bbc9b;
+    padding: 10px;
+    margin: -10px;
+    color: white;
+}
