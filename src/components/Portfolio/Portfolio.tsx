@@ -10,6 +10,8 @@ import { showAllIcons, showFlatDesignIcons, showGraphicDesignIcons, showWebDesig
 import React, { useEffect } from 'react';
 import PortfolioItem from './PortfolioItem';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const Portfolio: React.FC = () => {
 
@@ -72,7 +74,9 @@ const Portfolio: React.FC = () => {
                 </div>
                 <div className={s.portfolio__icons}>
                     {isPhotoIcon ? <PortfolioItem imageURL={IconPhoto} /> : ''}
-                    {isMusicIcon ? <PortfolioItem imageURL={IconMusic} /> : ''}
+
+                    {isMusicIcon ? <PortfolioItem imageURL={IconMusic} >
+                    </PortfolioItem> : ''}
                     {isSettingsIcon ? <PortfolioItem imageURL={IconSettings} /> : ''}
                     {isCompassIcon ? <PortfolioItem imageURL={IconCompass} /> : ''}
                     {isPhoneIcon ? <PortfolioItem imageURL={IconPhone} /> : ''}

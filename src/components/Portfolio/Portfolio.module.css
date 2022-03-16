@@ -78,6 +78,12 @@
     height: 180px;
     margin: 0 auto;
 }
+.imageWrapper{
+    position: relative;
+}
+.overlay{
+    position: relative;
+}
 .imageWrapper:hover::after{
     content: '';
     position: absolute;
@@ -89,3 +95,43 @@
     opacity: 0.7;
     border-radius: 50%;
 }
+.background{
+    width: 86px;
+    height: 86px;
+    background-color: #437269;
+    z-index: 10;
+}
+.fa_icon{
+    color: white;
+    z-index: 20;
+}
+.circle{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 15;
+}
+.fa_icon, .background, .circle{
+    position: absolute;
+    opacity: 0;
+}
+.imageWrapper:hover .background{
+    opacity: 0.5;
+    border-radius: 20%;
+    left: 43px;
+    top: 46px;
+}
+.imageWrapper:hover .fa_icon{
+    opacity: 1;
+    font-size: 25px;
+    left: 72px;
+    top: 79px;
+}
+.imageWrapper:hover .circle{
+    opacity: 0.4;
+    font-size: 25px;
+    left: 59px;
+    top: 66px;
+}
+
