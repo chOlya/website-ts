@@ -1,0 +1,76 @@
+.aboutUs{
+    padding: 56px 0;
+    background-color: #16a086;
+    color: white;
+}
+.aboutUs__container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.aboutUs__title{
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.aboutUs__text{
+    margin-bottom: 43px;
+    text-align: center;
+}
+.aboutUs__columns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 33.333%;
+    padding: 0 30px;
+}
+@media (max-width: 850px){
+    .column{
+        flex: 0 1 50%;
+    }
+    .column:not(:last-child){
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 555px){
+    .column{
+        flex: 0 1 100%;
+    }
+}
+.aboutUs__item{
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+}
+.column__wrapper{
+    width: 296px;
+    height: 307px;
+    position: relative;
+}
+.aboutUs__img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.column__body{
+    color: #444444;
+    padding: 20px;
+}
+.name{
+    font-size: 18px;
+    margin-bottom: 9px;
+    text-align: center;
+}
+.profession{
+    font-style: italic;
+    margin-bottom: 22px;
+    text-align: center;
+}
+.person__text{
+    line-height: 142%;
+}
