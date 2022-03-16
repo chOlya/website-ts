@@ -74,9 +74,7 @@ const Portfolio: React.FC = () => {
                 </div>
                 <div className={s.portfolio__icons}>
                     {isPhotoIcon ? <PortfolioItem imageURL={IconPhoto} /> : ''}
-
-                    {isMusicIcon ? <PortfolioItem imageURL={IconMusic} >
-                    </PortfolioItem> : ''}
+                    {isMusicIcon ? <PortfolioItem imageURL={IconMusic} /> : ''}
                     {isSettingsIcon ? <PortfolioItem imageURL={IconSettings} /> : ''}
                     {isCompassIcon ? <PortfolioItem imageURL={IconCompass} /> : ''}
                     {isPhoneIcon ? <PortfolioItem imageURL={IconPhone} /> : ''}

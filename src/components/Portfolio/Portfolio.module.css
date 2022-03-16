@@ -1,6 +1,6 @@
 .portfolio{
     margin: 54px 0; 
-    min-height: 682px;
+    /* min-height: 682px;  при фильтрации ширина блока не будет изменяться*/
 }
 .portfolio__container{
     max-width: 1270px;

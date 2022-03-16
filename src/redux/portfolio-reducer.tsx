@@ -67,9 +67,10 @@ const portfolioReducer = (state = initialState, action: PortfolioAction): Portfo
                 ...state,
                 isPhotoIcon: true,
                 isSettingsIcon: true,
-                isCompassIcon: true,
+                // isCompassIcon: true,
                 isPhoneIcon: true,
-                isMusicIcon: true,
+                isMusicIcon2: true,
+                isBubblesIcon: true,
                 activeButton: 'graphic',
             }
         }
