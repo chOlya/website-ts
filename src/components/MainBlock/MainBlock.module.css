@@ -1,0 +1,69 @@
+.mainBlock{
+    font-family: Lato;
+}
+.mainBlock__container{
+    position: relative;
+}
+.mainBlock__body{
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 76px 0 81px 0;
+    color: white;
+}
+.mainBlock__title{
+    font-size: 55px;
+    font-weight: 300;
+}
+.mainBlock__span{
+    font-weight: bold;
+}
+.mainBlock__body > *:not(:last-child){ 
+    padding-bottom: 41px;
+}
+.mainBlock__text{
+    font-size: 18px;
+    line-height: 133%;
+    font-weight: 300;
+    padding: 0 10px;
+}
+.mainBlock__button__firstLink{
+    color: white;
+    background-color: #1bbc9b;
+    font-size: 13px;
+    padding: 10px 15px;
+    font-weight: bold;
+    line-height: 133%;
+    letter-spacing: 0.1em;
+}
+.mainBlock__button__firstLink:active{
+    background-color: #16a086;
+}
+.mainBlock__secondButton{
+    margin-top: 41px;
+}
+.mainBlock__button__secondLink{
+    color: white;
+}
+.mainBlock__arrow{
+    width: 50px;
+    height: 50px;
+}
+.mainBlock__image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+.mainBlock__image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
