@@ -5,47 +5,47 @@ import IconSettings from '../../assets/img/profile/icon_settings.svg';
 import IconCompass from '../../assets/img/profile/icon_compass.svg';
 import IconPhone from '../../assets/img/profile/icon_phone.svg';
 import IconBubbles from '../../assets/img/profile/icon_bubbles.svg';
-import { useDispatch, } from 'react-redux';
-import { showAllIcons, showFlatDesignIcons, showGraphicDesignIcons, showWebDesignIcons } from '../../redux/portfolio-reducer';
-import React, { useEffect } from 'react';
+import React from 'react';
 import PortfolioItem from './PortfolioItem';
-import { useTypedSelector } from '../../hooks/useTypedSelector';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
 const Portfolio: React.FC = () => {
 
-    const dispatch = useDispatch();
+    const [state, setState] = useState('all');
+    const [activeButton, setActive] = useState('all');
 
-    useEffect(() => {
-        dispatch(showAllIcons());
-    }, []);
+    let items = [
+        { item: "Photo", image: IconPhoto, categories: ['all', 'web', 'graphic', 'flat'] },
+        { item: "Music", image: IconMusic, categories: ['all',] },
+        { item: "Settings", image: IconSettings, categories: ['all', 'graphic', 'flat'] },
+        { item: "Compass", image: IconCompass, categories: ['all', 'web', 'flat'] },
+        { item: "Phone", image: IconPhone, categories: ['all', 'web', 'graphic'] },
+        { item: "Bubbles", image: IconBubbles, categories: ['all', 'graphic', 'flat'] },
+        { item: "Photo2", image: IconPhoto, categories: ['all',] },
+        { item: "Music2", image: IconMusic, categories: ['all', 'web', 'graphic'] },
+    ];
 
     let onAllButton = () => {
-        dispatch(showAllIcons());
+        setState('all');
+        setActive('all');
     }
 
     let onWebDesignButton = () => {
-        dispatch(showWebDesignIcons());
+        setState('web');
+        setActive('web');
     }
 
     let onGraphicDesignButton = () => {
-        dispatch(showGraphicDesignIcons());
+        setState('graphic');
+        setActive('graphic');
     }
 
     let onFlatButton = () => {
-        dispatch(showFlatDesignIcons());
+        setState('flat');
+        setActive('flat');
     }
 
-    const isPhotoIcon = useTypedSelector(state => state.portfolio.isPhotoIcon);
-    const isMusicIcon = useTypedSelector(state => state.portfolio.isMusicIcon);
-    const isSettingsIcon = useTypedSelector(state => state.portfolio.isSettingsIcon);
-    const isCompassIcon = useTypedSelector(state => state.portfolio.isCompassIcon);
-    const isPhoneIcon = useTypedSelector(state => state.portfolio.isPhoneIcon);
-    const isBubblesIcon = useTypedSelector(state => state.portfolio.isBubblesIcon);
-    const isPhotoIcon2 = useTypedSelector(state => state.portfolio.isPhotoIcon2);
-    const isMusicIcon2 = useTypedSelector(state => state.portfolio.isMusicIcon2);
-    const isActive = useTypedSelector(state => state.portfolio.activeButton);
+    let filtred = items.filter(i => i.categories.includes(state));
 
     return (
         <div className={s.portfolio} id="portfolio">
@@ -56,31 +56,24 @@ const Portfolio: React.FC = () => {
                 </div>
                 <div className={s.portfolio__select}>
                     <div className={s.select__item}>
-                        <button className={isActive === 'all' ? s.active : s.select__item}
+                        <button className={activeButton === 'all' ? s.active : s.select__item}
                             onClick={() => { onAllButton() }}>All</button>
                     </div>
                     <div className={s.select__item}>
-                        <button className={isActive === 'web' ? s.active : s.select__item}
+                        <button className={activeButton === 'web' ? s.active : s.select__item}
                             onClick={() => { onWebDesignButton() }}>WEB DESIGN</button>
                     </div>
                     <div className={s.select__item}>
-                        <button className={isActive === 'graphic' ? s.active : s.select__item}
+                        <button className={activeButton === 'graphic' ? s.active : s.select__item}
                             onClick={() => { onGraphicDesignButton() }}>GRAPHIC DESIGN</button>
                     </div>
                     <div className={s.select__item}>
-                        <button className={isActive === 'flat' ? s.active : s.select__item}
+                        <button className={activeButton === 'flat' ? s.active : s.select__item}
                             onClick={() => { onFlatButton() }}>FLAT DESIGN</button>
                     </div>
                 </div>
                 <div className={s.portfolio__icons}>
-                    {isPhotoIcon ? <PortfolioItem imageURL={IconPhoto} /> : ''}
-                    {isMusicIcon ? <PortfolioItem imageURL={IconMusic} /> : ''}
-                    {isSettingsIcon ? <PortfolioItem imageURL={IconSettings} /> : ''}
-                    {isCompassIcon ? <PortfolioItem imageURL={IconCompass} /> : ''}
-                    {isPhoneIcon ? <PortfolioItem imageURL={IconPhone} /> : ''}
-                    {isBubblesIcon ? <PortfolioItem imageURL={IconBubbles} /> : ''}
-                    {isPhotoIcon2 ? <PortfolioItem imageURL={IconPhoto} /> : ''}
-                    {isMusicIcon2 ? <PortfolioItem imageURL={IconMusic} /> : ''}
+                    {filtred.map((f) => <PortfolioItem imageURL={f.image}></PortfolioItem>)}
                 </div>
             </div>
         </div>
